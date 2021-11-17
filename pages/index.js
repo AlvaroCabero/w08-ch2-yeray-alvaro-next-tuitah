@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import Head from 'next/head'
 import styles from './index.module.css'
 
@@ -48,6 +50,7 @@ const Home = () => (
 
 export default Home
 =======
+>>>>>>> main
 import axios from "axios";
 import Tuit from "../components/Tuit/Tuit";
 
