@@ -2,12 +2,13 @@
 // import Header from "@/components/Header/Header";
 // import styles from "./index.module.css";
 import axios from "axios";
+import Tuit from "../components/Tuit/Tuit";
 
 const Home = ({ tuits }) => (
   <>
     <h2>FEED</h2>
     {tuits.map((tuit) => (
-      <li key={tuit.id}>{tuit.text}</li>
+      <Tuit tuit={tuit} key={tuit.id} />
     ))}
   </>
 );
