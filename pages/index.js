@@ -1,6 +1,3 @@
-// import Head from "next/head";
-// import Header from "@/components/Header/Header";
-// import styles from "./index.module.css";
 import axios from "axios";
 import Tuit from "../components/Tuit/Tuit";
 

@@ -1,16 +1,14 @@
-import Link from "next/Link";
+import Link from "next/link";
 
-const Header = () => {
-  return (
-    <ul className="navbar">
-      <Link href="/">
-        <li className="navbar__element">Feed</li>
-      </Link>
-      <Link href="/post">
-        <li className="navbar__element">Post</li>
-      </Link>
-    </ul>
-  );
-};
+const Header = () => (
+  <ul className="navbar">
+    <Link href="/" passHref>
+      <li className="navbar__element">Feed</li>
+    </Link>
+    <Link href="/post" passHref>
+      <li className="navbar__element">Post</li>
+    </Link>
+  </ul>
+);
 
 export default Header;
