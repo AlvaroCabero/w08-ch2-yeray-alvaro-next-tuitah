@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head'
 import styles from './index.module.css'
 
@@ -46,3 +47,24 @@ const Home = () => (
 )
 
 export default Home
+=======
+import axios from "axios";
+import Tuit from "../components/Tuit/Tuit";
+
+const Home = ({ tuits }) => (
+  <>
+    <h2>FEED</h2>
+    {tuits.map((tuit) => (
+      <Tuit tuit={tuit} key={tuit.id} />
+    ))}
+  </>
+);
+
+export async function getServerSideProps() {
+  const { data: tuits } = await axios.get(
+    "https://w08ch2-yerayalvaro-next-tuitah.herokuapp.com/tuits"
+  );
+  return { props: { tuits } };
+}
+export default Home;
+>>>>>>> origin/feature/AddTuitFeedComponent
