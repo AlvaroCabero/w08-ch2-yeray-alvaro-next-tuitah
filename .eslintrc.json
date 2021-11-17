@@ -1,4 +1,5 @@
 {
+  "env": "jest",
   "extends": ["next/core-web-vitals", "airbnb-base", "prettier"],
   "rules": {
     "no-param-reassign": "off",
