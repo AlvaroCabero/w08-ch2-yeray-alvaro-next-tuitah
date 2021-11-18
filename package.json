@@ -10,6 +10,7 @@
   },
   "test": "jest --env=jsdom",
   "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
     "axios": "^0.24.0",
     "next": "latest",
     "react": "^17.0.2",
