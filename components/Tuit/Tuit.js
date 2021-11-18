@@ -1,5 +1,6 @@
 import "@fontsource/roboto";
 import axios from "axios";
+import PropTypes from "prop-types";
 import style from "../../styles/Feed.module.css";
 
 const Tuit = ({ tuit }) => {
@@ -31,6 +32,15 @@ const Tuit = ({ tuit }) => {
       </li>
     </>
   );
+};
+
+Tuit.propTypes = {
+  tuit: PropTypes.shape({
+    id: PropTypes.number,
+    text: PropTypes.string,
+    date: PropTypes.date,
+    likes: PropTypes.number,
+  }),
 };
 
 export default Tuit;
