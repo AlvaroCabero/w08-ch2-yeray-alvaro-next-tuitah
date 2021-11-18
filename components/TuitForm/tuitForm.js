@@ -13,6 +13,8 @@ const Form = () => {
 
   const [isDisabled, setIsDisabled] = useState(true);
 
+  console.log(router.pathname);
+
   const changeData = (event) => {
     setTuitData({
       ...tuitData,

@@ -1,7 +1,12 @@
 import "@fontsource/roboto";
 import axios from "axios";
 import PropTypes from "prop-types";
+import TimeAgo from "javascript-time-ago";
+import ReactTimeAgo from "react-time-ago";
+import en from "javascript-time-ago/locale/en-GB.json";
 import style from "../../styles/Feed.module.css";
+
+TimeAgo.addLocale(en);
 
 const Tuit = ({ tuit }) => {
   const onDelete = async (id) => {
@@ -28,7 +33,7 @@ const Tuit = ({ tuit }) => {
           </button>
         </div>
         <h4 className={style.text}>{tuit.text}</h4>
-        <p className={style.date}>{tuit.date}</p>
+        <ReactTimeAgo className={style.date} date={tuit.date} locale="en-GB" />
       </li>
     </>
   );
