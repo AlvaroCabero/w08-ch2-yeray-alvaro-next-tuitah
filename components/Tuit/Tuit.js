@@ -39,6 +39,7 @@ Tuit.propTypes = {
     id: PropTypes.number,
     text: PropTypes.string,
     date: PropTypes.date,
+    likes: PropTypes.number,
   }),
 };
 
