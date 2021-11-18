@@ -1,12 +1,13 @@
 import Link from "next/link";
+import style from "./Header.module.css";
 
 const Header = () => (
-  <ul className="navbar">
+  <ul className={style.navbar}>
     <Link href="/" passHref>
-      <li className="navbar__element">Feed</li>
+      <li className={style.navbar__element}>Feed</li>
     </Link>
     <Link href="/post" passHref>
-      <li className="navbar__element">Post</li>
+      <li className={style.navbar__element}>Post</li>
     </Link>
   </ul>
 );
