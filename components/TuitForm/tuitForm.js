@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
+import style from "./TuitForm.module.css";
 
 const { useState, useEffect } = require("react");
 
@@ -43,24 +44,30 @@ const Form = () => {
 
   return (
     <>
-      <form noValidate autoComplete="off" onSubmit={onPreSubmit}>
-        <label htmlFor="text">
-          I´d like to say:
+      <form
+        className={style.grid}
+        noValidate
+        autoComplete="off"
+        onSubmit={onPreSubmit}
+      >
+        <label className={style.text_label} htmlFor="text">
           <textarea
+            className={style.square}
             placeholder="Tuit text (max 200)"
             maxLength="200"
-            rows="7"
-            cols="44"
+            rows="12"
+            cols="48"
             type="textarea"
             id="text"
             value={tuitData.text}
             onChange={changeData}
           />
         </label>
-
-        <button disabled={isDisabled} type="submit">
-          Post
-        </button>
+        <div className={style.button_container}>
+          <button className={style.button} disabled={isDisabled} type="submit">
+            Post
+          </button>
+        </div>
       </form>
     </>
   );
