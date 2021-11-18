@@ -1,13 +1,25 @@
 import Link from "next/link";
 import style from "./Header.module.css";
 
-const Header = () => (
+const Header = ({ isWhere }) => (
   <ul className={style.navbar}>
     <Link href="/" passHref>
-      <li className={style.navbar__element}>Feed</li>
+      <li
+        className={`${style.navbar__element} ${
+          isWhere ? `${style.active}` : ""
+        }`}
+      >
+        Feed
+      </li>
     </Link>
     <Link href="/post" passHref>
-      <li className={style.navbar__element}>Post</li>
+      <li
+        className={`${style.navbar__element} ${
+          isWhere ? "" : `${style.active}`
+        }`}
+      >
+        Post
+      </li>
     </Link>
   </ul>
 );
