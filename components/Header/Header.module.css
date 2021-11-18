@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid red;
+}
+
+.navbar__element {
+  width: 200px;
+  height: 80%;
+  cursor: pointer;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__element:hover {
+  background-color: red;
+  color: white;
+}
