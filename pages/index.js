@@ -1,12 +1,16 @@
 import axios from "axios";
 import Tuit from "../components/Tuit/Tuit";
+import style from "../styles/Feed.module.css";
 
-const Home = ({ tuits }) => (
+const Feed = ({ tuits }) => (
   <>
-    <h2>FEED</h2>
-    {tuits.map((tuit) => (
-      <Tuit tuit={tuit} key={tuit.id} />
-    ))}
+    <div className={style.container}>
+      <ul className={style.grid}>
+        {tuits.map((tuit) => (
+          <Tuit tuit={tuit} key={tuit.id} />
+        ))}
+      </ul>
+    </div>
   </>
 );
 
@@ -16,4 +20,4 @@ export async function getServerSideProps() {
   );
   return { props: { tuits } };
 }
-export default Home;
+export default Feed;
